@@ -1,0 +1,54 @@
+.imageCard::before {
+  content: attr(data-id); /* Відображаємо значення атрибута data-id */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Це для вирівнювання тексту по центру */
+  background: rgba(0, 0, 0, 0.8); /* Фон тексту */
+  color: white; /* Колір тексту */
+  padding: 8px 12px; /* Відступи для тексту */
+  border-radius: 4px;
+  opacity: 0; /* Початкова прозорість */
+  pointer-events: none; /* Щоб текст не перешкоджав натисканню на зображення */
+  transition: opacity 0.3s ease; /* Анімація зміни прозорості */
+}
+
+.imageCard:hover::before {
+  opacity: 1; /* При наведенні змінюємо прозорість на 1 */
+}
+
+.imageContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 стовпці рівної ширини */
+  gap: 16px; /* Відступи між елементами */
+}
+
+.imageCard {
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  position: relative; /* Додаємо позицію relative для дочірнього елемента */
+}
+
+.hederGallery {
+  padding: 10px;
+
+}
+
+.filters {
+  display: flex;
+}
+
+/* .inputSearch {
+  size: auto;
+} */
+.btnFilters {
+  /* margin-left: 0px; */
+}
+.btnNavigation {
+  display: flex;
+}
+
+
+
+

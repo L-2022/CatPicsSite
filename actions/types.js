@@ -1,0 +1,1 @@
+export const SET_FILTERS_BUTTON = 'SET_FILTERS_BUTTON';
